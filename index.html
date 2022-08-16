@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras Geometricas</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <h1 class="header-title">Figuras Geometricas</h1>
+        <p class="header-description">
+            Calcular diferentes medidad de figuras geometricas como area y perimetro
+        </p>
+    </header >
+    <!-- Respuesta -->
+    <div class="answer">
+        <p id="result">El area de cuadrado es: 45cm</p>
+    </div>
+    <!-- Seccion de cajas -->
+    <section class="figure">
+        <div class="box">
+            <div class="box-header">
+                <h2>Cuadrado</h2>
+            </div>
+            <div class="box-main">
+                <p class="box-main__text">¿Cuanto mide cada lado de tu cuadrado?</p>
+                <input 
+                type="number" 
+                name="inputSide" 
+                id="inputSide" 
+                class="box-main__input"
+                placeholder="Ingrese los lados"
+                >
+                <button type="button" class="box-main__btn" onclick="calculatePerimSquare()">Perimetro</button>
+                <button type="button" class="box-main__btn" onclick="calculateAreaSquare()">Area</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <h2>Triangulo</h2>
+            </div>
+            <div class="box-main">
+                <p class="box-main__text">Cuanto mide cada lado de tu triangulo?</p>
+                <input 
+                type="number" 
+                name="inputLeft" 
+                id="inputLeft" 
+                class="box-main__input"
+                placeholder="Ingrese lado 1"
+                >
+                <input 
+                type="number" 
+                name="inputRight" 
+                id="inputRight" 
+                class="box-main__input"
+                placeholder="Ingrese lado 2"
+                >
+                <input 
+                type="number" 
+                name="inputBottom" 
+                id="inputBottom" 
+                class="box-main__input"
+                placeholder="Ingrese lado 3"
+                >
+                <button type="button" class="box-main__btn" onclick="calculatePerimTriangle()">Perimetro</button>
+                <p class="box-main__text">¿Cuanto mide base y altura de tu triangulo?</p>
+                <input 
+                type="number" 
+                name="inputbase" 
+                id="inputbase" 
+                class="box-main__input"
+                placeholder="Ingrese base"
+                >
+                <input 
+                type="number" 
+                name="inputheight" 
+                id="inputheight" 
+                class="box-main__input"
+                placeholder="Ingrese altura"
+                >
+                <button type="button" class="box-main__btn" onclick="calculateAreaTriangle()">Area</button>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box-header">
+                <h2>Circulo</h2>
+            </div>
+            <div class="box-main">
+                <p class="box-main__text">¿Cuanto mide el radio de tu circulo</p>
+                <input 
+                type="number" 
+                name="inputradio" 
+                id="inputradio" 
+                class="box-main__input"
+                placeholder="Ingrese radio"
+                >
+                <button type="button" class="box-main__btn" onclick="calculateDiameterCircle()">Diametro</button>
+                <button type="button" class="box-main__btn" onclick="calculatePerimeterCircle()">Perimetro</button>
+                <button type="button" class="box-main__btn" onclick="calculateAreaCircle()">Area</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="geometric.js"></script>
+</body>
+</html>
